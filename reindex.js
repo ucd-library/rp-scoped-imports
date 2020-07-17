@@ -1,9 +1,10 @@
 const scopedImport = require('./lib/scoped-import');
+const config= require('./lib/config');
 
 (async function() {
 
   await scopedImport.sync({
-    rootDir: '/data',
+    rootDir: config.dataDir,
     source : 'elements'
     ,force : true
   });
